@@ -3,6 +3,10 @@
 
 <p>This slider has tested Chrome, FireFox, IE, Android, iOS, Windows Phone 7,8. It has optimized many time for mobile application(mainly, cordova app)</p>
 
+<p>It is responsive, faster touch slier. Also, you can drag on road to change position of slider</p>
+
+<p></p>
+
 
 <pre><code>
 var slider1 = $("#slider1").touchSlider({
