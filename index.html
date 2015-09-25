@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Range Slider</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="js/jquery.hammer.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+    <script>
+        $(document).ready(function () {
+            var first = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '10 years +'],
+                    second = ['0', '100', '1,000', '5,000', '10,000', '20,000', '30,000', '40,000', '50,000', '60,000', '70,000', '80,000', '90,000', '100,000', '100,000 miles +'];
+
+            $("#slider1").touchSlider({
+                min: 0,
+                max: second.length - 1,
+                step: 1,
+                minPosition: 3,
+                maxPosition: 9,
+                hasSecondSlider: true,
+                arrStepValues: second,
+                load: function (pos) {
+                    console.log(pos);
+                }
+            });
+            var slider2 = $("#slider2").touchSlider({
+                min: 0,
+                max: first.length - 1,
+                step: 1,
+                hasSecondSlider: true,
+                hasSliderOutput: true,
+                arrStepValues: first,
+                customLabels: {
+                    initial: "Any",
+                    prefix: "",
+                    suffix: "year"
+                },
+                complete: function (indices) {
+                    //When slider is moved, update the bound model value with the newly selected one
+                    console.log(indices);
+                }
+            });
+            $("#change").click(function () {
+                slider2.setMinPosition(3);
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<p>This slider has tested Chrome, FireFox, IE, Android, iOS, Windows Phone 7,8.</p>
+
+<div class="theme1">
+    <div id="slider1"></div>
+</div>
+
+<div class="theme2">
+    <button id="change">Change First Slider Position</button>
+    <div id="slider2"></div>
+</div>
+</body>
+</html>
