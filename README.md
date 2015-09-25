@@ -1,4 +1,9 @@
-My custom range slider for project
+<h3>My custom range slider for cross-platform browsers.</h1>
+
+<p>This slider has tested Chrome, FireFox, IE, Android, iOS, Windows Phone 7,8. It has optimized many time for mobile application(mainly, cordova app)</p>
+
+<hr>  
+
 <pre><code>
 var slider1 = $("#slider1").touchSlider({
                     min: 0,//
