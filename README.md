@@ -1,5 +1,5 @@
 My custom range slider for project
-
+<pre><code>
 var slider1 = $("#slider1").touchSlider({
 min: 0,//
 max: 10,
@@ -15,3 +15,4 @@ complete: function (indices) {
     console.log(indices);
   }
 });
+</code></pre>
