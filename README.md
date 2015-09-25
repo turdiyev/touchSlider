@@ -5,7 +5,6 @@
 
 <p>It is responsive, faster touch slier. Also, you can drag on road to change position of slider</p>
 
-<p></p>
 
 
 <pre><code>
